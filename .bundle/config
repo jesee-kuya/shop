@@ -1,0 +1,6 @@
+---
+BUNDLE_PATH: "vendor/bundle"
+BUNDLE_WITHOUT: "test"
+BUNDLE_BUILD__YAML: "--with-cflags=-I/home/jkuya/local/include --with-ldflags=-L/home/jkuya/local/lib"
+BUNDLE_BUILD__LIBYAML: "--with-cflags=-I/home/jkuya/local/include --with-ldflags=-L/home/jkuya/local/lib"
+BUNDLE_BUILD__PSYCH: "--with-cflags=-I/home/jkuya/local/include --with-ldflags=-L/home/jkuya/local/lib"
