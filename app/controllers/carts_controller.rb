@@ -13,7 +13,14 @@ class CartsController < ApplicationController
     
     respond_to do |format|
       format.html { redirect_back(fallback_location: cart_path, notice: 'Item added to cart successfully.') }
-      format.json { render json: { status: 'success', cart_count: @cart.total_items, message: 'Item added to cart' } }
+      format.json { 
+        render json: { 
+          status: 'success', 
+          cart_count: @cart.total_items,
+          cart_total: @cart.total_price,
+          message: 'Item added to cart' 
+        } 
+      }
     end
   rescue ActiveRecord::RecordNotFound
     respond_to do |format|
@@ -27,7 +34,14 @@ class CartsController < ApplicationController
     
     respond_to do |format|
       format.html { redirect_back(fallback_location: cart_path, notice: 'Item removed from cart.') }
-      format.json { render json: { status: 'success', cart_count: @cart.total_items, message: 'Item removed from cart' } }
+      format.json { 
+        render json: { 
+          status: 'success', 
+          cart_count: @cart.total_items,
+          cart_total: @cart.total_price,
+          message: 'Item removed from cart' 
+        } 
+      }
     end
   rescue ActiveRecord::RecordNotFound
     respond_to do |format|
@@ -41,7 +55,14 @@ class CartsController < ApplicationController
     
     respond_to do |format|
       format.html { redirect_to cart_path, notice: 'Cart has been emptied.' }
-      format.json { render json: { status: 'success', cart_count: 0, message: 'Cart emptied' } }
+      format.json { 
+        render json: { 
+          status: 'success', 
+          cart_count: 0,
+          cart_total: 0,
+          message: 'Cart emptied' 
+        } 
+      }
     end
   end
 

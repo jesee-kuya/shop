@@ -84,14 +84,30 @@
               </div>
               <div class="level">
                 <div class="level-left">
-                  <p><strong>Total Price:</strong></p>
+                  <p><strong>Subtotal:</strong></p>
+                </div>
+                <div class="level-right">
+                  <p><%= number_to_currency(@cart.total_price) %></p>
+                </div>
+              </div>
+              <div class="level">
+                <div class="level-left">
+                  <p><strong>Shipping:</strong></p>
+                </div>
+                <div class="level-right">
+                  <p>Free</p>
+                </div>
+              </div>
+              <hr>
+              <div class="level">
+                <div class="level-left">
+                  <p class="title is-5"><strong>Total:</strong></p>
                 </div>
                 <div class="level-right">
                   <p class="title is-5"><%= number_to_currency(@cart.total_price) %></p>
                 </div>
               </div>
             </div>
-            <hr>
             <%= link_to "Proceed to Checkout", "#", class: "button is-success is-fullwidth" %>
             <br><br>
             <%= link_to "Continue Shopping", products_path, class: "button is-light is-fullwidth" %>
