@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  resources :products
-  devise_for :users, controllers: {
-    registrations: 'registrations'
-  }
+  devise_for :users
   root 'products#index'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  
+  resources :products
+  resources :cart_items, except: [:new, :edit]
+  
+  # Add cart route for convenience
+  get 'cart', to: 'cart_items#index'
 end
