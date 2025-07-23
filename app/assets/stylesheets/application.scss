@@ -23,10 +23,32 @@ $link-hover: #222;
 
 .notification {
   border-radius: 0;
+  position: relative;
+  z-index: 1000;
 }
 
 .notification:not(:last-child) {
   margin-bottom: 0;
+}
+
+.global-notification {
+  border-radius: 0 !important;
+  margin-bottom: 0 !important;
+  
+  &.dynamic-notification {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    border-radius: 0;
+    margin: 0;
+  }
+}
+
+// Smooth transitions for notifications
+.notification {
+  transition: opacity 0.3s ease-in-out;
 }
 
 .product-index-grid {

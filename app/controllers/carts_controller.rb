@@ -12,7 +12,10 @@ class CartsController < ApplicationController
     @cart.add_product(@product, quantity)
     
     respond_to do |format|
-      format.html { redirect_back(fallback_location: cart_path, notice: 'Item added to cart successfully.') }
+      format.html { 
+        flash[:notice] = "Added to your cart"
+        redirect_back(fallback_location: cart_path) 
+      }
       format.json { 
         render json: { 
           status: 'success', 
@@ -24,7 +27,10 @@ class CartsController < ApplicationController
     end
   rescue ActiveRecord::RecordNotFound
     respond_to do |format|
-      format.html { redirect_to products_path, alert: 'Product not found.' }
+      format.html { 
+        flash[:alert] = "Product not found"
+        redirect_to products_path 
+      }
       format.json { render json: { status: 'error', message: 'Product not found' } }
     end
   end
@@ -33,7 +39,10 @@ class CartsController < ApplicationController
     @cart.remove_product(@product)
     
     respond_to do |format|
-      format.html { redirect_back(fallback_location: cart_path, notice: 'Item removed from cart.') }
+      format.html { 
+        flash[:notice] = "Removed from your cart"
+        redirect_back(fallback_location: cart_path) 
+      }
       format.json { 
         render json: { 
           status: 'success', 
@@ -45,7 +54,10 @@ class CartsController < ApplicationController
     end
   rescue ActiveRecord::RecordNotFound
     respond_to do |format|
-      format.html { redirect_to cart_path, alert: 'Product not found in cart.' }
+      format.html { 
+        flash[:alert] = "Product not found in cart"
+        redirect_to cart_path 
+      }
       format.json { render json: { status: 'error', message: 'Product not found in cart' } }
     end
   end
@@ -54,7 +66,10 @@ class CartsController < ApplicationController
     @cart.clear
     
     respond_to do |format|
-      format.html { redirect_to cart_path, notice: 'Cart has been emptied.' }
+      format.html { 
+        flash[:notice] = "Cart has been emptied"
+        redirect_to cart_path 
+      }
       format.json { 
         render json: { 
           status: 'success', 

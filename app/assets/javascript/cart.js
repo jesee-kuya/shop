@@ -9,6 +9,45 @@ document.addEventListener("turbolinks:load", function() {
     });
   }
 
+  // Enhanced notification function with auto-dismiss
+  function showNotification(message, type) {
+    // Remove any existing notifications first
+    const existingNotifications = document.querySelectorAll('.dynamic-notification');
+    existingNotifications.forEach(notification => {
+      notification.parentNode.removeChild(notification);
+    });
+    
+    const notification = document.createElement('div');
+    notification.className = `notification is-${type === 'success' ? 'success' : 'danger'} global-notification dynamic-notification`;
+    notification.innerHTML = `<p>${message}</p>`;
+    notification.style.opacity = '0';
+    notification.style.transition = 'opacity 0.3s ease-in';
+    
+    document.body.insertBefore(notification, document.body.firstChild);
+    
+    // Fade in
+    setTimeout(() => {
+      notification.style.opacity = '1';
+    }, 10);
+    
+    // Auto-dismiss after 4 seconds with fade out
+    setTimeout(() => {
+      fadeOutNotification(notification);
+    }, 4000);
+  }
+  
+  // Smooth fade-out function
+  function fadeOutNotification(notification) {
+    notification.style.transition = 'opacity 0.5s ease-out';
+    notification.style.opacity = '0';
+    
+    setTimeout(() => {
+      if (notification.parentNode) {
+        notification.parentNode.removeChild(notification);
+      }
+    }, 500);
+  }
+
   // Handle AJAX responses for cart operations
   document.addEventListener('ajax:success', function(event) {
     const response = event.detail[0];
@@ -26,18 +65,8 @@ document.addEventListener("turbolinks:load", function() {
     const response = event.detail[0];
     if (response && response.message) {
       showNotification(response.message, 'error');
+    } else {
+      showNotification('An error occurred. Please try again.', 'error');
     }
   });
-
-  function showNotification(message, type) {
-    const notification = document.createElement('div');
-    notification.className = `notification is-${type === 'success' ? 'success' : 'danger'} global-notification`;
-    notification.innerHTML = `<p>${message}</p>`;
-    
-    document.body.insertBefore(notification, document.body.firstChild);
-    
-    setTimeout(() => {
-      notification.style.display = 'none';
-    }, 4000);
-  }
 });

@@ -13,11 +13,20 @@ class CartItemsController < ApplicationController
     @cart.add_product(@product, quantity)
     
     respond_to do |format|
-      format.html { redirect_to cart_items_path, notice: 'Item added to cart successfully.' }
-      format.json { render json: { status: 'success', cart_count: @cart.total_items } }
+      format.html { 
+        flash[:notice] = "Added to your cart"
+        redirect_to cart_items_path 
+      }
+      format.json { render json: { status: 'success', cart_count: @cart.total_items, message: 'Item added to cart' } }
     end
   rescue ActiveRecord::RecordNotFound
-    redirect_to products_path, alert: 'Product not found.'
+    respond_to do |format|
+      format.html { 
+        flash[:alert] = "Product not found"
+        redirect_to products_path 
+      }
+      format.json { render json: { status: 'error', message: 'Product not found' } }
+    end
   end
 
   def update
@@ -25,13 +34,19 @@ class CartItemsController < ApplicationController
     
     if @cart.update_quantity(@cart_item.product, quantity)
       respond_to do |format|
-        format.html { redirect_to cart_items_path, notice: 'Cart updated successfully.' }
-        format.json { render json: { status: 'success', cart_count: @cart.total_items } }
+        format.html { 
+          flash[:notice] = "Cart updated successfully"
+          redirect_to cart_items_path 
+        }
+        format.json { render json: { status: 'success', cart_count: @cart.total_items, message: 'Cart updated' } }
       end
     else
       respond_to do |format|
-        format.html { redirect_to cart_items_path, alert: 'Unable to update cart.' }
-        format.json { render json: { status: 'error' } }
+        format.html { 
+          flash[:alert] = "Unable to update cart"
+          redirect_to cart_items_path 
+        }
+        format.json { render json: { status: 'error', message: 'Unable to update cart' } }
       end
     end
   end
@@ -40,8 +55,11 @@ class CartItemsController < ApplicationController
     @cart.remove_product(@cart_item.product)
     
     respond_to do |format|
-      format.html { redirect_to cart_items_path, notice: 'Item removed from cart.' }
-      format.json { render json: { status: 'success', cart_count: @cart.total_items } }
+      format.html { 
+        flash[:notice] = "Removed from your cart"
+        redirect_to cart_items_path 
+      }
+      format.json { render json: { status: 'success', cart_count: @cart.total_items, message: 'Item removed from cart' } }
     end
   end
 
