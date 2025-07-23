@@ -19084,3 +19084,541 @@ ActionController::RoutingError (No route matches [GET] "/uploads/product/image/1
   
 ActionController::RoutingError (No route matches [GET] "/uploads/product/image/2/thumb_%22opel.jpeg%22"):
   
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /home/jkuya/Desktop/shop/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /home/jkuya/Desktop/shop/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2025-07-23 04:12:48 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+        bin/rails db:migrate
+You have 3 pending migrations:
+db/migrate/20241201000001_create_carts.rb
+db/migrate/20241201000002_create_cart_items.rb
+db/migrate/20241201000003_add_guest_cart_cleanup.rb:
+
+Started POST "/__better_errors/893136d31f67c637/variables" for 127.0.0.1 at 2025-07-23 04:12:48 +0300
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /home/jkuya/Desktop/shop/config/environment.rb:5)
+DEPRECATION WARNING: `to_time` will always preserve the full timezone rather than offset of the receiver in Rails 8.1. To opt in to the new behavior, set `config.active_support.to_time_preserves_timezone = :zone`. (called from <main> at /home/jkuya/Desktop/shop/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2025-07-23 04:13:25 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY created_at desc[0m
+  ↳ app/views/products/index.html.erb:14
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:35
+  [1m[36mCACHE User Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  [1m[36mCACHE User Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  [1m[36mCACHE User Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  [1m[36mCACHE User Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  [1m[36mCACHE User Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  [1m[36mCACHE User Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  [1m[36mCACHE User Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  Rendered products/index.html.erb within layouts/application (Duration: 61.7ms | GC: 15.4ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 87.6ms | GC: 16.0ms)
+Completed 200 OK in 109ms (Views: 88.0ms | ActiveRecord: 2.2ms (10 queries, 7 cached) | GC: 16.0ms)
+
+
+Started GET "/uploads/product/image/4/thumb_%22computer.jpg%22" for 127.0.0.1 at 2025-07-23 04:13:25 +0300
+Started GET "/uploads/product/image/3/thumb_%22ferrari.jpeg%22" for 127.0.0.1 at 2025-07-23 04:13:25 +0300
+Started GET "/uploads/product/image/2/thumb_%22opel.jpeg%22" for 127.0.0.1 at 2025-07-23 04:13:25 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/product/image/4/thumb_%22computer.jpg%22"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/product/image/3/thumb_%22ferrari.jpeg%22"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/product/image/2/thumb_%22opel.jpeg%22"):
+  
+Started GET "/uploads/product/image/1/thumb_%22fossil.jpg%22" for 127.0.0.1 at 2025-07-23 04:13:26 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/product/image/1/thumb_%22fossil.jpg%22"):
+  
+Started GET "/products/6" for 127.0.0.1 at 2025-07-23 04:13:29 +0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProduct Load (3.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:69:in `set_product'
+  [1m[36mCACHE Product Load (2.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:57
+  Rendered products/show.html.erb within layouts/application (Duration: 11.8ms | GC: 0.1ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | GC: 0.1ms)
+Completed 200 OK in 40ms (Views: 18.1ms | ActiveRecord: 1.0ms (3 queries, 1 cached) | GC: 0.3ms)
+
+
+Started GET "/uploads/product/image/4/thumb_%22computer.jpg%22" for 127.0.0.1 at 2025-07-23 04:13:29 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/product/image/4/thumb_%22computer.jpg%22"):
+  
+Started GET "/uploads/product/image/3/thumb_%22ferrari.jpeg%22" for 127.0.0.1 at 2025-07-23 04:13:29 +0300
+Started GET "/uploads/product/image/2/thumb_%22opel.jpeg%22" for 127.0.0.1 at 2025-07-23 04:13:29 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/product/image/3/thumb_%22ferrari.jpeg%22"):
+  
+Started GET "/uploads/product/image/1/thumb_%22fossil.jpg%22" for 127.0.0.1 at 2025-07-23 04:13:29 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/product/image/1/thumb_%22fossil.jpg%22"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/product/image/2/thumb_%22opel.jpeg%22"):
+  
+Started POST "/cart/add/6" for 127.0.0.1 at 2025-07-23 04:13:30 +0300
+Processing by CartsController#add_item as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "quantity"=>"1", "commit"=>"Add to Cart", "product_id"=>"6"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-07-23 04:13:30 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | GC: 0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 15.2ms | GC: 0.8ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | GC: 1.0ms)
+Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-07-23 04:13:37 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"jesee@proton.me", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "jesee@proton.me"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 14ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"jesee@proton.me", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.8ms | GC: 0.1ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | GC: 0.4ms)
+Completed 200 OK in 197ms (Views: 6.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2025-07-23 04:13:41 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.7ms | GC: 0.2ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | GC: 2.5ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 2.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2025-07-23 04:13:55 +0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"jesee", "email"=>"jesee@proton.me", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mBEGIN immediate TRANSACTION[0m
+  [1m[36mUser Exists? (7.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jesee@proton.me"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "jesee@proton.me"], ["encrypted_password", "[FILTERED]"], ["created_at", "2025-07-23 01:13:55.377120"], ["updated_at", "2025-07-23 01:13:55.377120"], ["name", "jesee"]]
+  [1m[36mTRANSACTION (11.5ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 228ms (ActiveRecord: 12.9ms (2 queries, 0 cached) | GC: 6.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-07-23 04:13:55 +0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY created_at desc[0m
+  ↳ app/views/products/index.html.erb:14
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:35
+  [1m[36mCACHE User Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  [1m[36mCACHE User Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  [1m[36mCACHE User Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  [1m[36mCACHE User Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  [1m[36mCACHE User Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  [1m[36mCACHE User Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  [1m[36mCACHE User Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  Rendered products/index.html.erb within layouts/application (Duration: 25.3ms | GC: 2.6ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCart Load (0.8ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:13:in `current_cart_count'
+  Rendered layout layouts/application.html.erb (Duration: 54.4ms | GC: 11.3ms)
+Completed 200 OK in 56ms (Views: 54.3ms | ActiveRecord: 0.9ms (11 queries, 7 cached) | GC: 11.6ms)
+
+
+Started GET "/uploads/product/image/4/thumb_%22computer.jpg%22" for 127.0.0.1 at 2025-07-23 04:13:55 +0300
+Started GET "/uploads/product/image/1/thumb_%22fossil.jpg%22" for 127.0.0.1 at 2025-07-23 04:13:55 +0300
+Started GET "/uploads/product/image/2/thumb_%22opel.jpeg%22" for 127.0.0.1 at 2025-07-23 04:13:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/product/image/4/thumb_%22computer.jpg%22"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/product/image/2/thumb_%22opel.jpeg%22"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/product/image/1/thumb_%22fossil.jpg%22"):
+  
+Started GET "/uploads/product/image/3/thumb_%22ferrari.jpeg%22" for 127.0.0.1 at 2025-07-23 04:13:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/product/image/3/thumb_%22ferrari.jpeg%22"):
+  
+Started GET "/products/6" for 127.0.0.1 at 2025-07-23 04:13:57 +0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProduct Load (3.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:69:in `set_product'
+  [1m[36mCACHE Product Load (2.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:57
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:59
+  Rendered products/show.html.erb within layouts/application (Duration: 11.6ms | GC: 0.6ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCart Load (1.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:13:in `current_cart_count'
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | GC: 3.3ms)
+Completed 200 OK in 44ms (Views: 24.0ms | ActiveRecord: 0.9ms (5 queries, 1 cached) | GC: 8.7ms)
+
+
+Started GET "/uploads/product/image/4/thumb_%22computer.jpg%22" for 127.0.0.1 at 2025-07-23 04:13:57 +0300
+Started GET "/uploads/product/image/3/thumb_%22ferrari.jpeg%22" for 127.0.0.1 at 2025-07-23 04:13:57 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/product/image/4/thumb_%22computer.jpg%22"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/product/image/3/thumb_%22ferrari.jpeg%22"):
+  
+Started GET "/uploads/product/image/2/thumb_%22opel.jpeg%22" for 127.0.0.1 at 2025-07-23 04:13:57 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/product/image/2/thumb_%22opel.jpeg%22"):
+  
+Started GET "/uploads/product/image/1/thumb_%22fossil.jpg%22" for 127.0.0.1 at 2025-07-23 04:13:57 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/product/image/1/thumb_%22fossil.jpg%22"):
+  
+Started POST "/cart/add/6" for 127.0.0.1 at 2025-07-23 04:13:58 +0300
+Processing by CartsController#add_item as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "quantity"=>"1", "commit"=>"Add to Cart", "product_id"=>"6"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCart Load (0.9ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:9:in `find_or_create_cart'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mBEGIN immediate TRANSACTION[0m
+  ↳ app/models/user.rb:9:in `find_or_create_cart'
+  [1m[36mCart Create (6.3ms)[0m  [1m[32mINSERT INTO "carts" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?) RETURNING "id"[0m  [["user_id", 3], ["created_at", "2025-07-23 01:13:58.584967"], ["updated_at", "2025-07-23 01:13:58.584967"]]
+  ↳ app/models/user.rb:9:in `find_or_create_cart'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ app/models/user.rb:9:in `find_or_create_cart'
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:91:in `set_product'
+  [1m[36mCartItem Load (0.8ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."cart_id" = ? AND "cart_items"."product_id" = ? LIMIT ?[0m  [["cart_id", 1], ["product_id", 6], ["LIMIT", 1]]
+  ↳ app/models/cart.rb:17:in `add_product'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mBEGIN immediate TRANSACTION[0m
+  ↳ app/models/cart.rb:23:in `add_product'
+  [1m[36mCartItem Exists? (3.5ms)[0m  [1m[34mSELECT 1 AS one FROM "cart_items" WHERE "cart_items"."product_id" = ? AND "cart_items"."cart_id" = ? LIMIT ?[0m  [["product_id", 6], ["cart_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cart.rb:23:in `add_product'
+  [1m[36mCartItem Create (1.1ms)[0m  [1m[32mINSERT INTO "cart_items" ("cart_id", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["cart_id", 1], ["product_id", 6], ["created_at", "2025-07-23 01:13:58.617337"], ["updated_at", "2025-07-23 01:13:58.617337"]]
+  ↳ app/models/cart.rb:23:in `add_product'
+  [1m[36mCart Update All (1.0ms)[0m  [1m[33mUPDATE "carts" SET "cart_items_count" = COALESCE("cart_items_count", 0) + ? WHERE "carts"."id" = ?[0m  [["cart_items_count", 1], ["id", 1]]
+  ↳ app/models/cart.rb:23:in `add_product'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ app/models/cart.rb:23:in `add_product'
+Redirected to http://127.0.0.1:3000/products/6
+Completed 302 Found in 57ms (ActiveRecord: 9.3ms (8 queries, 0 cached) | GC: 9.8ms)
+
+
+Started GET "/products/6" for 127.0.0.1 at 2025-07-23 04:13:58 +0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:69:in `set_product'
+  [1m[36mCACHE Product Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:57
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:59
+  Rendered products/show.html.erb within layouts/application (Duration: 15.7ms | GC: 7.4ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCart Load (5.5ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:13:in `current_cart_count'
+  [1m[36mCartItem Sum (1.0ms)[0m  [1m[34mSELECT SUM("cart_items"."quantity") FROM "cart_items" WHERE "cart_items"."cart_id" = ?[0m  [["cart_id", 1]]
+  ↳ app/models/cart.rb:13:in `total_items'
+  Rendered layout layouts/application.html.erb (Duration: 30.9ms | GC: 11.7ms)
+Completed 200 OK in 35ms (Views: 30.8ms | ActiveRecord: 0.6ms (6 queries, 1 cached) | GC: 12.4ms)
+
+
+Started GET "/cart" for 127.0.0.1 at 2025-07-23 04:13:59 +0300
+Processing by CartsController#show as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/concerns/current_cart.rb:7:in `current_cart'
+  [1m[36mCart Load (1.7ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:9:in `find_or_create_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mCartItem Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "cart_items" WHERE "cart_items"."cart_id" = ? LIMIT ?[0m  [["cart_id", 1], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:12
+  [1m[36mCACHE CartItem Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "cart_items" WHERE "cart_items"."cart_id" = ? LIMIT ?[0m  [["cart_id", 1], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:20
+  [1m[36mCartItem Load (1.8ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."cart_id" = ?[0m  [["cart_id", 1]]
+  ↳ app/views/carts/show.html.erb:21
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 6]]
+  ↳ app/views/carts/show.html.erb:21
+  [1m[36mCartItem Sum (0.8ms)[0m  [1m[34mSELECT SUM("cart_items"."quantity") FROM "cart_items" WHERE "cart_items"."cart_id" = ?[0m  [["cart_id", 1]]
+  ↳ app/models/cart.rb:13:in `total_items'
+  [1m[36mCACHE CartItem Load (0.9ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."cart_id" = ?[0m  [["cart_id", 1]]
+  ↳ app/models/cart.rb:9:in `total_price'
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/cart.rb:9:in `block in total_price'
+  Rendered carts/show.html.erb within layouts/application (Duration: 31.7ms | GC: 2.0ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE CartItem Sum (0.7ms)[0m  [1m[34mSELECT SUM("cart_items"."quantity") FROM "cart_items" WHERE "cart_items"."cart_id" = ?[0m  [["cart_id", 1]]
+  ↳ app/models/cart.rb:13:in `total_items'
+  Rendered layout layouts/application.html.erb (Duration: 38.5ms | GC: 2.3ms)
+Completed 200 OK in 55ms (Views: 39.5ms | ActiveRecord: 1.3ms (10 queries, 3 cached) | GC: 3.7ms)
+
+
+Started GET "/cart" for 127.0.0.1 at 2025-07-23 04:14:01 +0300
+Processing by CartsController#show as HTML
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/concerns/current_cart.rb:7:in `current_cart'
+  [1m[36mCart Load (2.6ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:9:in `find_or_create_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mCartItem Exists? (2.2ms)[0m  [1m[34mSELECT 1 AS one FROM "cart_items" WHERE "cart_items"."cart_id" = ? LIMIT ?[0m  [["cart_id", 1], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:12
+  [1m[36mCACHE CartItem Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "cart_items" WHERE "cart_items"."cart_id" = ? LIMIT ?[0m  [["cart_id", 1], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:20
+  [1m[36mCartItem Load (2.0ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."cart_id" = ?[0m  [["cart_id", 1]]
+  ↳ app/views/carts/show.html.erb:21
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 6]]
+  ↳ app/views/carts/show.html.erb:21
+  [1m[36mCartItem Sum (1.0ms)[0m  [1m[34mSELECT SUM("cart_items"."quantity") FROM "cart_items" WHERE "cart_items"."cart_id" = ?[0m  [["cart_id", 1]]
+  ↳ app/models/cart.rb:13:in `total_items'
+  [1m[36mCACHE CartItem Load (1.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."cart_id" = ?[0m  [["cart_id", 1]]
+  ↳ app/models/cart.rb:9:in `total_price'
+  [1m[36mProduct Load (1.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/cart.rb:9:in `block in total_price'
+  Rendered carts/show.html.erb within layouts/application (Duration: 28.4ms | GC: 5.9ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE CartItem Sum (0.9ms)[0m  [1m[34mSELECT SUM("cart_items"."quantity") FROM "cart_items" WHERE "cart_items"."cart_id" = ?[0m  [["cart_id", 1]]
+  ↳ app/models/cart.rb:13:in `total_items'
+  Rendered layout layouts/application.html.erb (Duration: 38.6ms | GC: 6.5ms)
+Completed 200 OK in 61ms (Views: 38.3ms | ActiveRecord: 2.2ms (10 queries, 3 cached) | GC: 6.7ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2025-07-23 04:14:03 +0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (4.6ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY created_at desc[0m
+  ↳ app/views/products/index.html.erb:14
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:35
+  [1m[36mCACHE User Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  [1m[36mCACHE User Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  [1m[36mCACHE User Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  [1m[36mCACHE User Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  [1m[36mCACHE User Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  [1m[36mCACHE User Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  [1m[36mCACHE User Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  Rendered products/index.html.erb within layouts/application (Duration: 52.2ms | GC: 1.0ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCart Load (1.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:13:in `current_cart_count'
+  [1m[36mCartItem Sum (1.3ms)[0m  [1m[34mSELECT SUM("cart_items"."quantity") FROM "cart_items" WHERE "cart_items"."cart_id" = ?[0m  [["cart_id", 1]]
+  ↳ app/models/cart.rb:13:in `total_items'
+  Rendered layout layouts/application.html.erb (Duration: 63.3ms | GC: 1.7ms)
+Completed 200 OK in 66ms (Views: 62.9ms | ActiveRecord: 1.6ms (12 queries, 7 cached) | GC: 1.7ms)
+
+
+Started GET "/uploads/product/image/4/thumb_%22computer.jpg%22" for 127.0.0.1 at 2025-07-23 04:14:03 +0300
+Started GET "/uploads/product/image/3/thumb_%22ferrari.jpeg%22" for 127.0.0.1 at 2025-07-23 04:14:03 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/product/image/3/thumb_%22ferrari.jpeg%22"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/product/image/4/thumb_%22computer.jpg%22"):
+  
+Started GET "/uploads/product/image/2/thumb_%22opel.jpeg%22" for 127.0.0.1 at 2025-07-23 04:14:03 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/product/image/2/thumb_%22opel.jpeg%22"):
+  
+Started GET "/uploads/product/image/1/thumb_%22fossil.jpg%22" for 127.0.0.1 at 2025-07-23 04:14:03 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/product/image/1/thumb_%22fossil.jpg%22"):
+  
+Started GET "/cart" for 127.0.0.1 at 2025-07-23 04:14:04 +0300
+Processing by CartsController#show as HTML
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/concerns/current_cart.rb:7:in `current_cart'
+  [1m[36mCart Load (1.9ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:9:in `find_or_create_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+Started GET "/uploads/product/image/4/thumb_%22computer.jpg%22" for 127.0.0.1 at 2025-07-23 04:14:04 +0300
+Started GET "/uploads/product/image/3/thumb_%22ferrari.jpeg%22" for 127.0.0.1 at 2025-07-23 04:14:04 +0300
+  [1m[36mCartItem Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "cart_items" WHERE "cart_items"."cart_id" = ? LIMIT ?[0m  [["cart_id", 1], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:12
+  [1m[36mCACHE CartItem Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cart_items" WHERE "cart_items"."cart_id" = ? LIMIT ?[0m  [["cart_id", 1], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:20
+  [1m[36mCartItem Load (1.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."cart_id" = ?[0m  [["cart_id", 1]]
+  ↳ app/views/carts/show.html.erb:21
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 6]]
+  ↳ app/views/carts/show.html.erb:21
+Started GET "/uploads/product/image/2/thumb_%22opel.jpeg%22" for 127.0.0.1 at 2025-07-23 04:14:04 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/product/image/4/thumb_%22computer.jpg%22"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/product/image/3/thumb_%22ferrari.jpeg%22"):
+  
+  [1m[36mCartItem Sum (1.5ms)[0m  [1m[34mSELECT SUM("cart_items"."quantity") FROM "cart_items" WHERE "cart_items"."cart_id" = ?[0m  [["cart_id", 1]]
+  ↳ app/models/cart.rb:13:in `total_items'
+  [1m[36mCACHE CartItem Load (0.7ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."cart_id" = ?[0m  [["cart_id", 1]]
+  ↳ app/models/cart.rb:9:in `total_price'
+  [1m[36mProduct Load (2.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/cart.rb:9:in `block in total_price'
+  Rendered carts/show.html.erb within layouts/application (Duration: 85.1ms | GC: 19.0ms)
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/product/image/2/thumb_%22opel.jpeg%22"):
+  
+Started GET "/uploads/product/image/1/thumb_%22fossil.jpg%22" for 127.0.0.1 at 2025-07-23 04:14:04 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/product/image/1/thumb_%22fossil.jpg%22"):
+  
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE CartItem Sum (0.6ms)[0m  [1m[34mSELECT SUM("cart_items"."quantity") FROM "cart_items" WHERE "cart_items"."cart_id" = ?[0m  [["cart_id", 1]]
+  ↳ app/models/cart.rb:13:in `total_items'
+  Rendered layout layouts/application.html.erb (Duration: 261.2ms | GC: 35.8ms)
+Completed 200 OK in 287ms (Views: 262.1ms | ActiveRecord: 1.4ms (10 queries, 3 cached) | GC: 36.2ms)
+
+
+Started DELETE "/cart/empty" for 127.0.0.1 at 2025-07-23 04:14:07 +0300
+Processing by CartsController#empty as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCart Load (1.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:9:in `find_or_create_cart'
+  [1m[36mCartItem Load (1.0ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."cart_id" = ?[0m  [["cart_id", 1]]
+  ↳ app/models/cart.rb:59:in `clear'
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[36mBEGIN immediate TRANSACTION[0m
+  ↳ app/models/cart.rb:59:in `clear'
+  [1m[36mCartItem Destroy (9.4ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."id" = ?[0m  [["id", 1]]
+  ↳ app/models/cart.rb:59:in `clear'
+  [1m[36mCart Update All (1.0ms)[0m  [1m[33mUPDATE "carts" SET "cart_items_count" = COALESCE("cart_items_count", 0) - ? WHERE "carts"."id" = ?[0m  [["cart_items_count", 1], ["id", 1]]
+  ↳ app/models/cart.rb:59:in `clear'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mCOMMIT TRANSACTION[0m
+  ↳ app/models/cart.rb:59:in `clear'
+Redirected to http://127.0.0.1:3000/cart
+Completed 302 Found in 30ms (ActiveRecord: 8.5ms (5 queries, 0 cached) | GC: 5.8ms)
+
+
+Started GET "/cart" for 127.0.0.1 at 2025-07-23 04:14:07 +0300
+Processing by CartsController#show as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/concerns/current_cart.rb:7:in `current_cart'
+  [1m[36mCart Load (0.9ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:9:in `find_or_create_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mCartItem Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "cart_items" WHERE "cart_items"."cart_id" = ? LIMIT ?[0m  [["cart_id", 1], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:12
+  [1m[36mCACHE CartItem Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "cart_items" WHERE "cart_items"."cart_id" = ? LIMIT ?[0m  [["cart_id", 1], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:20
+  [1m[36mCACHE CartItem Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "cart_items" WHERE "cart_items"."cart_id" = ? LIMIT ?[0m  [["cart_id", 1], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:72
+  Rendered carts/show.html.erb within layouts/application (Duration: 8.9ms | GC: 2.1ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCartItem Sum (1.1ms)[0m  [1m[34mSELECT SUM("cart_items"."quantity") FROM "cart_items" WHERE "cart_items"."cart_id" = ?[0m  [["cart_id", 1]]
+  ↳ app/models/cart.rb:13:in `total_items'
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | GC: 3.5ms)
+Completed 200 OK in 25ms (Views: 19.0ms | ActiveRecord: 0.5ms (6 queries, 2 cached) | GC: 3.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-07-23 04:14:08 +0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (4.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY created_at desc[0m
+  ↳ app/views/products/index.html.erb:14
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:35
+  [1m[36mCACHE User Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  [1m[36mCACHE User Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  [1m[36mCACHE User Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  [1m[36mCACHE User Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  [1m[36mCACHE User Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  [1m[36mCACHE User Load (9.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  [1m[36mCACHE User Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:31
+  Rendered products/index.html.erb within layouts/application (Duration: 63.3ms | GC: 7.5ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCart Load (1.0ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:13:in `current_cart_count'
+  [1m[36mCartItem Sum (1.3ms)[0m  [1m[34mSELECT SUM("cart_items"."quantity") FROM "cart_items" WHERE "cart_items"."cart_id" = ?[0m  [["cart_id", 1]]
+  ↳ app/models/cart.rb:13:in `total_items'
+  Rendered layout layouts/application.html.erb (Duration: 77.6ms | GC: 10.9ms)
+Completed 200 OK in 81ms (Views: 77.7ms | ActiveRecord: 1.7ms (12 queries, 7 cached) | GC: 10.9ms)
+
+
+Started GET "/uploads/product/image/4/thumb_%22computer.jpg%22" for 127.0.0.1 at 2025-07-23 04:14:09 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/product/image/4/thumb_%22computer.jpg%22"):
+  
+Started GET "/uploads/product/image/2/thumb_%22opel.jpeg%22" for 127.0.0.1 at 2025-07-23 04:14:09 +0300
+Started GET "/uploads/product/image/3/thumb_%22ferrari.jpeg%22" for 127.0.0.1 at 2025-07-23 04:14:09 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/product/image/3/thumb_%22ferrari.jpeg%22"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/product/image/2/thumb_%22opel.jpeg%22"):
+  
+Started GET "/uploads/product/image/1/thumb_%22fossil.jpg%22" for 127.0.0.1 at 2025-07-23 04:14:09 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/product/image/1/thumb_%22fossil.jpg%22"):
+  
