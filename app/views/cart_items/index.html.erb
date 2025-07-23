@@ -11,8 +11,8 @@
             <div class="box">
               <div class="columns is-vcentered">
                 <div class="column is-2">
-                  <% if item.product.image.attached? %>
-                    <%= image_tag(item.product.image.variant(resize_to_limit: [100, 100])) %>
+                  <% if item.product.image.present? %>
+                    <%= image_tag(item.product.image_url(:thumb), class: "image is-96x96") %>
                   <% end %>
                 </div>
                 
