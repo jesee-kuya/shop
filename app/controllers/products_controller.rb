@@ -1,8 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [ :show, :edit, :update, :destroy ]
-  
   before_action :authenticate_user!, except: [:index, :show]
-
+  before_action :authorize_owner!, only: [:edit, :update, :destroy]
 
   # GET /products or /products.json
   def index
@@ -55,9 +54,14 @@ class ProductsController < ApplicationController
     end
   end
 
- # DELETE /products/1 or /products/1.json
-def destroy
-end
+  # DELETE /products/1 or /products/1.json
+  def destroy
+    @product.destroy
+    respond_to do |format|
+      format.html { redirect_to products_path, notice: "Product was successfully deleted." }
+      format.json { head :no_content }
+    end
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -68,5 +72,11 @@ end
     # Only allow a list of trusted parameters through.
     def product_params
       params.require(:product).permit(:brand, :model, :description, :condition, :finish, :title, :price, :image)
+    end
+
+    def authorize_owner!
+      unless current_user && current_user == @product.user
+        redirect_to products_path, alert: "You are not authorized to perform this action."
+      end
     end
 end
