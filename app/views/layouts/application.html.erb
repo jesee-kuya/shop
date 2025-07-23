@@ -41,7 +41,7 @@
 
             <% if user_signed_in? %>
               <%= link_to 'Sell', new_product_path, class: "navbar-item button is-dark" %>
-              <%= link_to cart_items_path, class: "navbar-item" do %>
+              <%= link_to cart_path, class: "navbar-item" do %>
                 Cart (<%= current_user.cart_item_count %>)
               <% end %>
               <div class="navbar-item has-dropdown is-hoverable">

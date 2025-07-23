@@ -1,0 +1,103 @@
+<% content_for :body_class, "cart-show" %>
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8">
+        <div class="level">
+          <div class="level-left">
+            <h1 class="title">Shopping Cart</h1>
+          </div>
+          <div class="level-right">
+            <% if @cart_items.any? %>
+              <%= link_to "Empty Cart", empty_cart_path, method: :delete, 
+                  data: { confirm: "Are you sure you want to empty your cart?" }, 
+                  class: "button is-small is-danger is-outlined" %>
+            <% end %>
+          </div>
+        </div>
+        
+        <% if @cart_items.any? %>
+          <% @cart_items.each do |item| %>
+            <div class="box">
+              <div class="columns is-vcentered">
+                <div class="column is-2">
+                  <%= product_image_tag(item.product, :thumb, class: "image is-96x96") %>
+                </div>
+                
+                <div class="column is-4">
+                  <h4 class="title is-5">
+                    <%= link_to item.product.title, item.product %>
+                  </h4>
+                  <p class="subtitle is-6"><%= item.product.brand %> - <%= item.product.model %></p>
+                  <p class="has-text-grey">Unit Price: <%= number_to_currency(item.product.price) %></p>
+                </div>
+                
+                <div class="column is-2">
+                  <div class="field has-addons">
+                    <%= form_with url: remove_item_cart_path(item.product), method: :delete, local: true, class: "control" do |f| %>
+                      <%= f.submit "-", class: "button is-small" %>
+                    <% end %>
+                    <div class="control">
+                      <input class="input is-small has-text-centered" type="text" value="<%= item.quantity %>" readonly>
+                    </div>
+                    <%= form_with url: add_item_cart_path(item.product), method: :post, local: true, class: "control" do |f| %>
+                      <%= f.hidden_field :quantity, value: 1 %>
+                      <%= f.submit "+", class: "button is-small" %>
+                    <% end %>
+                  </div>
+                </div>
+                
+                <div class="column is-2">
+                  <p class="title is-6"><%= number_to_currency(item.total_price) %></p>
+                </div>
+                
+                <div class="column is-2">
+                  <%= link_to "Remove All", remove_item_cart_path(item.product), method: :delete, 
+                      data: { confirm: "Remove all #{item.product.title} from cart?" }, 
+                      class: "button is-small is-danger is-outlined" %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% else %>
+          <div class="has-text-centered">
+            <p class="title is-4">Your cart is empty</p>
+            <p class="subtitle is-6">Add some products to get started!</p>
+            <%= link_to "Continue Shopping", products_path, class: "button is-primary" %>
+          </div>
+        <% end %>
+      </div>
+      
+      <% if @cart_items.any? %>
+        <div class="column is-4">
+          <div class="box">
+            <h3 class="title is-4">Order Summary</h3>
+            <div class="content">
+              <div class="level">
+                <div class="level-left">
+                  <p><strong>Total Items:</strong></p>
+                </div>
+                <div class="level-right">
+                  <p><%= @cart.total_items %></p>
+                </div>
+              </div>
+              <div class="level">
+                <div class="level-left">
+                  <p><strong>Total Price:</strong></p>
+                </div>
+                <div class="level-right">
+                  <p class="title is-5"><%= number_to_currency(@cart.total_price) %></p>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <%= link_to "Proceed to Checkout", "#", class: "button is-success is-fullwidth" %>
+            <br><br>
+            <%= link_to "Continue Shopping", products_path, class: "button is-light is-fullwidth" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>

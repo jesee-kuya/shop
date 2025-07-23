@@ -39,6 +39,18 @@ class Cart < ApplicationRecord
     end
   end
 
+  def decrement_product(product, quantity = 1)
+    current_item = cart_items.find_by(product: product)
+    return false unless current_item
+
+    if current_item.quantity <= quantity
+      current_item.destroy
+    else
+      current_item.quantity -= quantity
+      current_item.save
+    end
+  end
+
   def empty?
     cart_items_count == 0
   end

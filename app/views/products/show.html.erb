@@ -62,8 +62,7 @@
             <%= link_to 'Delete Product', @product, data: { confirm: "Are you sure you want to delete this product?" }, method: :delete, class: "button is-danger is-fullwidth" %>
           </div>
         <% else %>
-          <%= form_with url: cart_items_path, method: :post, local: true do |f| %>
-            <%= f.hidden_field :product_id, value: @product.id %>
+          <%= form_with url: add_item_cart_path(@product), method: :post, local: true do |f| %>
             <div class="field">
               <%= f.number_field :quantity, value: 1, min: 1, class: "input", placeholder: "Quantity" %>
             </div>
