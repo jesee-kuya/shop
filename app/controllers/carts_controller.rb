@@ -84,13 +84,7 @@ class CartsController < ApplicationController
   private
 
   def set_cart
-    if user_signed_in?
-      @cart = current_user.find_or_create_cart
-    else
-      # For guest users, store cart in session
-      @cart = Cart.find_by(id: session[:cart_id]) || Cart.create
-      session[:cart_id] = @cart.id
-    end
+    @cart = current_cart
   end
 
   def set_product

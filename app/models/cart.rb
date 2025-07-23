@@ -58,4 +58,16 @@ class Cart < ApplicationRecord
   def clear
     cart_items.destroy_all
   end
+
+  # Merge another cart's items into this cart
+  def merge_with(other_cart)
+    return false unless other_cart.is_a?(Cart)
+    
+    other_cart.cart_items.includes(:product).each do |item|
+      next unless item.product # Skip if product was deleted
+      add_product(item.product, item.quantity)
+    end
+    
+    true
+  end
 end

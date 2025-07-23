@@ -10,7 +10,7 @@ module ApplicationHelper
 
   def current_cart_count
     if user_signed_in?
-      current_user.cart_item_count
+      current_user.cart&.total_items || 0
     else
       session[:cart_id] ? Cart.find_by(id: session[:cart_id])&.total_items || 0 : 0
     end
